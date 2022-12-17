@@ -1,10 +1,7 @@
-import sys
-
 f = open("inputs/1.txt")
 data = f.read()
 
 grouped = [sum([int(num) for num in group.split('\n')]) for group in data.split('\n\n')]
-
 sortedList = list(reversed(sorted(grouped)))
 
 part1 = sortedList[0]
