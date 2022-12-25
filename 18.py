@@ -1,11 +1,6 @@
 import numpy as np
 from scipy.ndimage import binary_fill_holes
 
-def manhattan(a, b):
-    x1,y1,z1 = a
-    x2,y2,z2 = b
-    return abs(x1-x2)+abs(y1-y2)+abs(z1-z2)
-
 def neighbors(point,grid):
   x,y,z = point
   nbs = []
@@ -19,7 +14,6 @@ f = open("inputs/18.txt")
 data = f.read().split('\n')
 
 PART2 = True
-
 SIZE = 24
 grid = np.zeros((SIZE,SIZE,SIZE)) # to inlude "-1" and "23"
 newgrid = np.zeros((SIZE,SIZE,SIZE))
